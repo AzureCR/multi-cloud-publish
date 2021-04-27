@@ -136,7 +136,7 @@ FunctionAppResourceId=$(az functionapp show --name $FunctionAppName -g $SourceRe
 az eventgrid event-subscription create \
 --name replicateAppSub \
 --source-resource-id $SourceACRResourceId \
---endpoint $FunctionAppResourceId/functions/Function1 \
+--endpoint $FunctionAppResourceId/functions/ReplicateFunction \
 --endpoint-type azurefunction
 
 # Trigger registry events
