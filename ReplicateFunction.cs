@@ -18,9 +18,9 @@ using System.Reflection;
 
 namespace acr_replicate_app
 {
-    public static class Function1
+    public static class ReplicateFunction
     {
-        [FunctionName("Function1")]
+        [FunctionName("ReplicateFunction")]
         public static async System.Threading.Tasks.Task Run(
             [EventGridTrigger] string eventGridEventAsString, 
             ExecutionContext context, 

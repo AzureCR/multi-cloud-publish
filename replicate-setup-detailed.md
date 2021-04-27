@@ -280,7 +280,7 @@ SourceACRResourceId=$(az acr show --name $SourceACRName --query id --output tsv)
 FunctionAppResourceId=$(az functionapp show --name $functionAppName --query id -g $SourceResourceGroupName --output tsv)
 
 # Create an event grid subscription.
-az eventgrid event-subscription create --name replicateAppSub --source-resource-id $SourceACRResourceId --endpoint $FunctionAppResourceId/functions/Function1 --endpoint-type azurefunction
+az eventgrid event-subscription create --name replicateAppSub --source-resource-id $SourceACRResourceId --endpoint $FunctionAppResourceId/functions/ReplicateFunction --endpoint-type azurefunction
 ```
 
 ## Testing
